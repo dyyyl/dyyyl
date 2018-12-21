@@ -12,55 +12,15 @@ const options = {
   borderStyle: "round",
 };
 
-// Text + chalk definitions
-const data = {
-  name: chalk.white("Dyl Reynard /"),
-  handle: chalk.cyan("@dyyyl"),
-  work: chalk.white("Wandering Web Engineer"),
-  npm: chalk.cyan("https://www.npmjs.com/~dyyyl"),
-  twitter: chalk.cyan("https://twitter.com/dyyyyyyyyyl"),
-  github: chalk.cyan("https://github.com/dyyyl"),
-  linkedin: chalk.cyan("https://www.linkedin.com/in/dyyyl/"),
-  web: chalk.cyan("https://dyyyl.rocks"),
-  npx: chalk.white("npx dyyyl"),
-  labelWork: chalk.white.bold("      Work:"),
-  labelNPM: chalk.white.bold("       NPM:"),
-  labelTwitter: chalk.white.bold("   Twitter:"),
-  labelGitHub: chalk.white.bold("    GitHub:"),
-  labelLinkedIn: chalk.white.bold("  LinkedIn:"),
-  labelWeb: chalk.white.bold("       Web:"),
-  labelCard: chalk.white.bold("      Card:"),
-};
+const cardText = chalk`{hex('#FFEFD5') Dyl Reynard /} {hex('#00BFFF') @dyyyl}
 
-// Actual strings we're going to output
-const newline = "\n";
-const heading = `${data.name} ${data.handle}`;
-const working = `${data.labelWork}  ${data.work}`;
-const npming = `${data.labelNPM}  ${data.npm}`;
-const twittering = `${data.labelTwitter}  ${data.twitter}`;
-const githubing = `${data.labelGitHub}  ${data.github}`;
-const linkedining = `${data.labelLinkedIn}  ${data.linkedin}`;
-const webing = `${data.labelWeb}  ${data.web}`;
-const carding = `${data.labelCard}  ${data.npx}`;
+     {hex('#FFEFD5').bold Work: } {hex('#FFEFD5') Wandering Web Engineer}
+      {hex('#FFEFD5').bold NPM: } {hex('#00BFFF') https://www.npmjs.com/~dyyyl}
+  {hex('#FFEFD5').bold Twitter: } {hex('#00BFFF') https://twitter.com/dyyyyyyyyyl}
+   {hex('#FFEFD5').bold Github: } {hex('#00BFFF') https://github.com/dyyyl}
+ {hex('#FFEFD5').bold LinkedIn: } {hex('#00BFFF') https://www.linkedin.com/in/dyyyl/}
+      {hex('#FFEFD5').bold Web: } {hex('#00BFFF') https://dyyyl.rocks}
 
-// Put all our output together into a single variable so we can use boxen effectively
-const output =
-  heading +
-  newline +
-  newline +
-  working +
-  newline +
-  npming +
-  newline +
-  twittering +
-  newline +
-  githubing +
-  newline +
-  linkedining +
-  newline +
-  webing +
-  newline +
-  newline +
-  carding;
+     {hex('#FFEFD5').bold Card: } {hex('#FFEFD5') npx dyyyl}`;
 
-console.log(chalk.green(boxen(output, options)));
+console.log(chalk.hex("#db7093")(boxen(cardText, options)));
