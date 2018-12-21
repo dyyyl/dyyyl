@@ -5,5 +5,5 @@ It's me, Dyl!
 Via npx:
 
 ```
-npx bitandbang
+npx dyyyl
 ```
