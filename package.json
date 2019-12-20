@@ -1,7 +1,7 @@
 {
   "name": "dyyyl",
-  "version": "1.1.0",
-  "description": "A personal card for Dyl Reynard (@dyyyl)",
+  "version": "1.2.0",
+  "description": "A personal card for Dyl Lavoie (@dyyyl)",
   "main": "index.js",
   "bin": {
     "dyyyl": "./bin/card.js"
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "https://github.com/dyyyl/dyyyl.git"
   },
-  "author": "Dyl Reynard",
+  "author": "Dyl Lavoie",
   "license": "MIT",
   "dependencies": {
     "boxen": "^2.1.0",
